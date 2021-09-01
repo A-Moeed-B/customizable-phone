@@ -1,0 +1,117 @@
+<html>
+    <style>
+        body{
+            background-color:black;
+        }
+        .main-image
+        {
+
+        }
+        p{
+            color: white;
+        }
+        .main-content
+        {
+            background-color:black;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;            
+        }
+        .renderer
+        {
+            grid-area: 1 / 1 / 6 / 4;
+            height: 1000px;
+            width:1200px;
+        }
+        .sidebar
+        {
+            grid-area: 1 / 4 / 6 / 6;
+        }
+        img{
+            position:absolute;
+            top:0px;
+            left:0px;
+        }
+        .phone
+        {
+         z-index: 10;
+        }
+        .logo
+        {
+            z-index: 20;
+            widows: 100px;
+            height:100px;
+            top:261px;
+            left:715px;
+        }
+    </style>
+    <body>
+        <div class="main-content">
+            <div class="renderer">
+                <img id="rendered-phone-man" class="phone" src="24K-GOLD-IPHONE-12-PRO1.png">
+                <img id="rendered-logo" class ="logo"src="logo_transparent.png">
+
+            </div>
+            <div class="sidebar">
+                <div class="color-change">
+                    <p>This is is how it happens</p>
+                    <h>Change color</h>
+                    <br>
+                    <input type="radio" id="black-phone" value="black-phone" name="color_selector" onClick="changeColor(this.value)">
+                    <label for="black-phone">Black</label>
+                    <input type="radio" id="gold-phone" value ="gold-phone"name="color_selector" onClick="changeColor(this.value)">
+                    <label for="gold-phone">Gold</label>
+                </div>
+                <div class="logo-change">
+                    <h>Change Logo</h>
+                    <br>
+                    <input type="radio" id="black-logo" value="black-logo" name="logo-selector" onClick="changeLogo(this.value)">
+                    <label for="black-logo">Black</label>
+                    <input type="radio" id="gold-logo" value="gold-logo" name="logo-selector" onClick="changeLogo(this.value)">
+                    <label for="gold-logo">Gold</label>
+                </div>
+            </div>
+           
+        </div>
+
+    <script type="text/javascript">
+    //This function loads the selected color image. 
+
+    function changeColor(color)
+    {
+        var imageSource=document.getElementById("rendered-phone-man");
+        switch(color)
+        {
+            case 'black-phone':
+                imageSource.src="black-full.PNG"
+                break;
+            case 'gold-phone':
+                imageSource.src="24K-GOLD-IPHONE-12-PRO1.png"
+                break;
+        }
+    }
+    //this function loads the selected logo-image
+    function changeLogo(logo)
+    {
+        var imageSource=document.getElementById("rendered-logo");
+        console.log("Function should run");
+        switch(logo)
+        {
+            case 'black-logo':
+                console.log("Color should be black");
+                imageSource.style.visibility="visible";
+                break;
+            case 'gold-logo':
+                console.log("Color should be gold");
+                imageSource.style.visibility="hidden";
+                break;
+            
+
+        }
+    }
+    </script>
+</body>
+</html>
