@@ -131,8 +131,6 @@
                     <label for="brown-normalrcase">Brown</label>
                     <input type="radio" id="green-normalcase" value="green-normalcase" name="case-selector" onClick="changeInlay(this.value)">
                     <label for="green-normalrcase">Green</label>
-                    <input type="radio" id="pink-normalcase" value="pink-normalcase" name="case-selector" onClick="changeInlay(this.value)">
-                    <label for="pink-normalrcase">Pink</label>
                     <input type="radio" id="purple-normalcase" value="purple-normalcase" name="case-selector" onClick="changeInlay(this.value)">
                     <label for="purple-normalrcase">Purple</label>
                     <input type="radio" id="red-normalcase" value="red-normalcase" name="case-selector" onClick="changeInlay(this.value)">
@@ -140,7 +138,7 @@
                     <input type="radio" id="yellow-normalcase" value="yellow-normalcase" name="case-selector" onClick="changeInlay(this.value)">
                     <label for="yellow-normalrcase">Yellow</label>
                     <h1>Disable BackInlay</h1>
-                    <input type="radio" id="disable-inlay" value="disable-inlay" name="case-selector" onClick="">
+                    <input type="radio" id="disable-inlay" value="disable-inlay" name="case-selector" onClick="changeInlay(this.value)">
                 </div>
             </div>
         </div>
@@ -190,6 +188,7 @@
     function changeInlay(inlay)
     {
         var imageSource=document.getElementById("rendered-inlay");
+        imageSource.style.visibility="visible";
         switch(inlay)
         {
             case "beige-fingercase":
@@ -222,7 +221,7 @@
             case "beige-normalcase":
                 imageSource.src="/back-inlay/normal-case/beige.png";
                 break;
-            case "black-normalrcase":
+            case "black-normalcase":
                 imageSource.src="/back-inlay/normal-case/black.png";
                 break;
             case "blue-normalcase":
@@ -233,9 +232,6 @@
                 break;
             case "green-normalcase":
                 imageSource.src="/back-inlay/normal-case/green.png";
-                break;
-            case "pink-normalcase":
-                imageSource.src="/back-inlay/normal-case/pink.png";
                 break;
             case "purple-normalcase":
                 imageSource.src="/back-inlay/normal-case/purple.png";
