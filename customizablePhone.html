@@ -3,12 +3,14 @@
         body{
             background-color:black;
         }
-        .main-image
-        {
-
-        }
         p{
             color: white;
+        }
+        div
+        {
+            padding:20px;    
+        }
+        h1{
         }
         .main-content
         {
@@ -30,6 +32,17 @@
         {
             grid-area: 1 / 4 / 6 / 6;
         }
+        .color-change{
+
+        }
+        .logo-change
+        {
+
+        }
+        .back-inlay
+        {
+
+        }
         img{
             position:absolute;
             top:0px;
@@ -42,42 +55,97 @@
         .logo
         {
             z-index: 20;
-            widows: 100px;
-            height:100px;
-            top:261px;
-            left:715px;
+            height:400px;
+            top: 132px;
+            left:535px;
         }
+        .inlay
+        {
+            z-index:30;
+            height:835px;
+            top:20px;
+            left:360px;
+        }
+        
     </style>
     <body>
         <div class="main-content">
             <div class="renderer">
-                <img id="rendered-phone-man" class="phone" src="24K-GOLD-IPHONE-12-PRO1.png">
-                <img id="rendered-logo" class ="logo"src="logo_transparent.png">
-
+                <img id="rendered-phone-man" class="phone" src="/housing-material/24K-ROSE-GOLD-12-PRO-2.png">
+                <img id="rendered-logo" class ="logo">
+                <img id="rendered-inlay" class="inlay">
             </div>
             <div class="sidebar">
                 <div class="color-change">
                     <p>This is is how it happens</p>
-                    <h>Change color</h>
+                    <h1>Change color</h1>
                     <br>
-                    <input type="radio" id="black-phone" value="black-phone" name="color_selector" onClick="changeColor(this.value)">
-                    <label for="black-phone">Black</label>
-                    <input type="radio" id="gold-phone" value ="gold-phone"name="color_selector" onClick="changeColor(this.value)">
+                    <input type="radio" id="rose-phone" checked="true" value="rose-phone" name="color-selector" onClick="changeColor(this.value)">
+                    <label for="rose-phone">Rose</label>
+                    <input type="radio" id="gold-phone" value ="gold-phone"name="color-selector" onClick="changeColor(this.value)">
                     <label for="gold-phone">Gold</label>
+                    <input type="radio" id="platinum-phone" value="platinum-phone" name="color-selector" onClick="changeColor(this.value)">
+                    <label for="platinum-phone">Platinium</label>
                 </div>
                 <div class="logo-change">
-                    <h>Change Logo</h>
-                    <br>
-                    <input type="radio" id="black-logo" value="black-logo" name="logo-selector" onClick="changeLogo(this.value)">
-                    <label for="black-logo">Black</label>
-                    <input type="radio" id="gold-logo" value="gold-logo" name="logo-selector" onClick="changeLogo(this.value)">
+                    <h1>Change Logo</h1>
+                    <input type="radio" id="emerald-logo" checked="true" value="emerald-logo" name="logo-selector" onClick="changeLogo(this.value)">
+                    <label for="emerald-logo">Emerald</label>
+                    <input type="radio" id="gold-logo" value ="gold-logo"name="logo-selector" onClick="changeLogo(this.value)">
                     <label for="gold-logo">Gold</label>
+                    <input type="radio" id="ruby-logo" value="ruby-logo" name="logo-selector" onClick="changeLogo(this.value)">
+                    <label for="ruby-logo">Ruby</label>
+                    <input type="radio" id="saphire-logo" value="saphire-logo" name="logo-selector" onClick="changeLogo(this.value)">
+                    <label for="saphire-logo">Saphire</label>
+                    <input type="radio" id="daimond-logo" value="daimond-logo" name="logo-selector" onClick="changeLogo(this.value)">
+                    <label for="daimond-logo">Daimond</label>
+                </div>
+                <div class="back-inlay">
+                    <h1>Finger Case option</h1>
+                    <input type="radio" id="beige-fingercase" checked="true" value="beige-fingercase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="beige-fingercase">Beige</label>
+                    <input type="radio" id="black-fingercase" value ="black-fingercase"name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="black-fingercase">Black</label>
+                    <input type="radio" id="blue-fingercase" value="blue-fingercase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="blue-fingercase">Blue</label>
+                    <input type="radio" id="brown-fingercase" value="brown-fingercase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="brown-fingercase">Brown</label>
+                    <input type="radio" id="green-fingercase" value="green-fingercase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="green-fingercase">Green</label>   
+                    <input type="radio" id="pink-fingercase" value="pink-fingercase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="pink-fingercase">Pink</label>
+                    <input type="radio" id="purple-fingercase" value="purple-fingercase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="purple-fingercase">Purple</label>
+                    <input type="radio" id="red-fingercase" value="red-fingercase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="red-fingercase">Red</label>
+                    <input type="radio" id="yellow-fingercase" value="yellow-fingercase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="yellow-fingercase">Yellow</label>
+                    <h1>Normal Cases</h1>
+                    <input type="radio" id="beige-normalcase" value="beige-normalcase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="beige-normalrcase">Beige</label>
+                    <input type="radio" id="black-normalcase" value="black-normalcase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="black-normalrcase">Black</label>
+                    <input type="radio" id="blue-normalcase" value="blue-normalcase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="blue-normalrcase">Blue</label>
+                    <input type="radio" id="brown-normalcase" value="brown-normalcase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="brown-normalrcase">Brown</label>
+                    <input type="radio" id="green-normalcase" value="green-normalcase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="green-normalrcase">Green</label>
+                    <input type="radio" id="pink-normalcase" value="pink-normalcase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="pink-normalrcase">Pink</label>
+                    <input type="radio" id="purple-normalcase" value="purple-normalcase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="purple-normalrcase">Purple</label>
+                    <input type="radio" id="red-normalcase" value="red-normalcase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="red-normalrcase">Red</label>
+                    <input type="radio" id="yellow-normalcase" value="yellow-normalcase" name="case-selector" onClick="changeInlay(this.value)">
+                    <label for="yellow-normalrcase">Yellow</label>
+                    <h1>Disable BackInlay</h1>
+                    <input type="radio" id="disable-inlay" value="disable-inlay" name="case-selector" onClick="">
                 </div>
             </div>
-           
         </div>
-
     <script type="text/javascript">
+    
     //This function loads the selected color image. 
 
     function changeColor(color)
@@ -85,12 +153,14 @@
         var imageSource=document.getElementById("rendered-phone-man");
         switch(color)
         {
-            case 'black-phone':
-                imageSource.src="black-full.PNG"
+            case 'rose-phone':
+                imageSource.src="/housing-material/24K-ROSE-GOLD-12-PRO-2.png"
                 break;
             case 'gold-phone':
-                imageSource.src="24K-GOLD-IPHONE-12-PRO1.png"
+                imageSource.src="/housing-material/24K-GOLD-IPHONE-12-PRO1.png"
                 break;
+            case 'platinum-phone':
+                imageSource.src="/housing-material/PLATINUM-IPHONE-12-PRO-3.png"
         }
     }
     //this function loads the selected logo-image
@@ -100,14 +170,86 @@
         console.log("Function should run");
         switch(logo)
         {
-            case 'black-logo':
-                console.log("Color should be black");
-                imageSource.style.visibility="visible";
+            case 'emerald-logo':
+                imageSource.src="/apple-logos/emeraled.png";
                 break;
             case 'gold-logo':
-                console.log("Color should be gold");
+                imageSource.src="/apple-logos/Gold.png";
+                break;
+            case 'ruby-logo':
+                imageSource.src="/apple-logos/rubby.png";
+                break;
+            case 'saphire-logo':
+                imageSource.src="/apple-logos/sapphire.png";
+                break;
+            case 'daimond-logo':
+                imageSource.src="/apple-logos/vs-1-diamond-stones.png";
+                break;
+        }
+    }    
+    function changeInlay(inlay)
+    {
+        var imageSource=document.getElementById("rendered-inlay");
+        switch(inlay)
+        {
+            case "beige-fingercase":
+                imageSource.src="/back-inlay/finger-case/beige.png";
+                break;
+            case "black-fingercase":
+                imageSource.src="/back-inlay/finger-case/black.png";
+                break;
+            case "blue-fingercase":
+                imageSource.src="/back-inlay/finger-case/blue.png";
+                break;
+            case "brown-fingercase":
+                imageSource.src="/back-inlay/finger-case/brown.png";
+                break;
+            case "green-fingercase":
+                imageSource.src="/back-inlay/finger-case/green.png";
+                break;
+            case "pink-fingercase":
+                imageSource.src="/back-inlay/finger-case/pink.png";
+                break;
+            case "purple-fingercase":
+                imageSource.src="/back-inlay/finger-case/purple.png";
+                break;
+            case "red-fingercase":
+                imageSource.src="/back-inlay/finger-case/red.png";
+                break;
+            case "yellow-fingercase":
+                imageSource.src="/back-inlay/finger-case/yellow.png";
+                break;
+            case "beige-normalcase":
+                imageSource.src="/back-inlay/normal-case/beige.png";
+                break;
+            case "black-normalrcase":
+                imageSource.src="/back-inlay/normal-case/black.png";
+                break;
+            case "blue-normalcase":
+                imageSource.src="/back-inlay/normal-case/blue.png";
+                break;
+            case "brown-normalcase":
+                imageSource.src="/back-inlay/normal-case/brown.png";
+                break;
+            case "green-normalcase":
+                imageSource.src="/back-inlay/normal-case/green.png";
+                break;
+            case "pink-normalcase":
+                imageSource.src="/back-inlay/normal-case/pink.png";
+                break;
+            case "purple-normalcase":
+                imageSource.src="/back-inlay/normal-case/purple.png";
+                break;
+            case "red-normalcase":
+                imageSource.src="/back-inlay/normal-case/red.png";
+                break;
+            case "yellow-normalcase":
+                imageSource.src="/back-inlay/normal-case/yellow.png";
+                break;
+            case "disable-inlay":
                 imageSource.style.visibility="hidden";
                 break;
+            
         }
     }
     </script>
